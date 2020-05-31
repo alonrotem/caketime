@@ -32,6 +32,7 @@
 .digit
 {
   width: 108px;
+  opacity: 0;
 }
 
 #overlay{
@@ -48,6 +49,38 @@
   position: relative;
   top: -208px;
 }
+
+.fade-in {
+animation: fadeIn ease 4s;
+-webkit-animation: fadeIn ease 4s;
+-moz-animation: fadeIn ease 4s;
+-o-animation: fadeIn ease 4s;
+-ms-animation: fadeIn ease 4s;
+}
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
   </style>
   <title>Cake Time!</title>
 </head>
@@ -59,28 +92,28 @@
   <table>
     <tbody><tr>
       <td>
-        <img id="imgHr1" src="./images/2.png" class="digit">
+        <img id="imgHr1" src="./images/2.png" class="digit fade-in">
       </td>
       <td>
-        <img id="imgHr2" src="./images/3.png" class="digit">
+        <img id="imgHr2" src="./images/3.png" class="digit fade-in">
       </td>
       <td>
-        <img id="dotsHr" src="./images/dots-yellow.png" class="digit" style="visibility: hidden;">
+        <img id="dotsHr" src="./images/dots-yellow.png" class="digit fade-in" style="visibility: hidden;">
       </td>
       <td>
-        <img id="imgMin1" src="./images/5.png" class="digit">
+        <img id="imgMin1" src="./images/5.png" class="digit fade-in">
       </td>
       <td>
-        <img id="imgMin2" src="./images/6.png" class="digit">
+        <img id="imgMin2" src="./images/6.png" class="digit fade-in">
       </td>
       <td>
-        <img id="dotsMin" src="./images/dots-yellow.png" class="digit" style="visibility: hidden;">
+        <img id="dotsMin" src="./images/dots-yellow.png" class="digit fade-in" style="visibility: hidden;">
       </td> 
       <td>
-        <img id="imgSec1" src="./images/0.png" class="digit">
+        <img id="imgSec1" src="./images/0.png" class="digit fade-in">
       </td>
       <td>
-        <img id="imgSec2" src="./images/6.png" class="digit">
+        <img id="imgSec2" src="./images/6.png" class="digit fade-in">
       </td>              
     </tr>
       </tbody></table></center>
