@@ -87,6 +87,10 @@
       setImage("imgSec1", parseInt(seconds / 10));
       setImage("imgSec2", seconds % 10);
 
+      setImage("dotsHr", (hours % 2)? "dots-yellow" : "dots-blue");
+      setImage("dotsMin", (hours % 2)? "dots-yellow" : "dots-blue");
+      
+
       hourdots.style.visibility = (hourdots.style.visibility == "hidden")? "visible": "hidden";
       minutedots.style.visibility = (minutedots.style.visibility == "hidden")? "visible": "hidden";
 
