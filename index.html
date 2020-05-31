@@ -2,10 +2,89 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Página de prueba<title>
+  <style>
+    body {
+      background: #f06d06;
+      font-size: 80%;
+      padding: 20px;
+    }
+    .content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.digit
+{
+  width: 108px;
+}
+  </style>
+  <title>Cake Time!</title>
 </head>
 <body>
-  <h1>Hola amiguitos!</h1>
-  <footer>gpuma 2017</footer>
+  <div class="content">
+    <table>
+      <tr>
+        <td>
+          <img id="imgHr1" src="./images/0.png" class="digit">
+        </td>
+        <td>
+          <img id="imgHr2" src="./images/0.png" class="digit">
+        </td>
+        <td>
+          <img id="dotsHr" src="./images/dots-blue.png" class="digit">
+        </td>
+        <td>
+          <img id="imgMin1" src="./images/0.png" class="digit">
+        </td>
+        <td>
+          <img id="imgMin2" src="./images/0.png" class="digit">
+        </td>
+        <td>
+          <img id="dotsMin" src="./images/dots-blue.png" class="digit">
+        </td> 
+        <td>
+          <img id="imgSec1" src="./images/0.png" class="digit">
+        </td>
+        <td>
+          <img id="imgSec2" src="./images/0.png" class="digit">
+        </td>              
+      </tr>
+    </table>
+  </div>
+  <script>
+    function setImage(img, digit) {
+      //document.getElementById("imgHr1").src
+      var imgPath = "./images/" + digit + ".png";
+      var element = document.getElementById(img);
+      if((element && element.src != imgPath))
+      {
+        element.src = imgPath;
+      }
+    }
+
+    setInterval(function(){ 
+      var now = new Date();
+      var hours = now.getHours();
+      var minutes = now.getMinutes();
+      var seconds = now.getSeconds();
+      var hourdots = document.getElementById("dotsHr");
+      var minutedots = document.getElementById("dotsMin");
+
+      setImage("imgHr1", parseInt(hours / 10));
+      setImage("imgHr2", hours % 10);
+
+      setImage("imgMin1", parseInt(minutes / 10));
+      setImage("imgMin2", minutes % 10);
+
+      setImage("imgSec1", parseInt(seconds / 10));
+      setImage("imgSec2", seconds % 10);
+
+      hourdots.style.visibility = (hourdots.style.visibility == "hidden")? "visible": "hidden";
+      minutedots.style.visibility = (minutedots.style.visibility == "hidden")? "visible": "hidden";
+
+    }, 500);
+  </script>
 </body>
 </html>
