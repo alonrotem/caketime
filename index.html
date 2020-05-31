@@ -10,7 +10,7 @@
   <meta property="og:description" content="It's always a good time for a cake!" />
   <style>
     body {
-      background: url(./images/kisses.png) rgb(165, 105, 189) no-repeat center center fixed;
+      background: url(./images/kisses.png)  no-repeat center center fixed;
       -webkit-background-size: 100%;
       -moz-background-size: 100%;
       -o-background-size: 100%;
@@ -18,89 +18,76 @@
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
-      background-blend-mode: multiply;
     }
-    .content {
+    .wrapper {
   position: absolute;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+
+  height: 178px;
+  width: 100%;
 }
 .digit
 {
   width: 108px;
 }
+
+#overlay{
+  background-color: darkgreen;
+  width:100%;
+  height: 178px;
+  position: relative;
+  top: 0px;
+  padding-bottom: 30px;
+  opacity: 70%;
+}
+#content
+{
+  position: relative;
+  top: -208px;
+}
   </style>
   <title>Cake Time!</title>
 </head>
 <body>
-  <div class="content">
-    <table>
-      <tr>
-        <td>
-          <img id="imgHr1" src="./images/0.png" class="digit">
-        </td>
-        <td>
-          <img id="imgHr2" src="./images/0.png" class="digit">
-        </td>
-        <td>
-          <img id="dotsHr" src="./images/dots-blue.png" class="digit">
-        </td>
-        <td>
-          <img id="imgMin1" src="./images/0.png" class="digit">
-        </td>
-        <td>
-          <img id="imgMin2" src="./images/0.png" class="digit">
-        </td>
-        <td>
-          <img id="dotsMin" src="./images/dots-blue.png" class="digit">
-        </td> 
-        <td>
-          <img id="imgSec1" src="./images/0.png" class="digit">
-        </td>
-        <td>
-          <img id="imgSec2" src="./images/0.png" class="digit">
-        </td>              
-      </tr>
-    </table>
-  </div>
-  <script>
-    function setImage(img, digit) {
-      //document.getElementById("imgHr1").src
-      var imgPath = "./images/" + digit + ".png";
-      var element = document.getElementById(img);
-      if((element && element.src != imgPath))
-      {
-        element.src = imgPath;
-      }
-    }
+  <div class="wrapper">
+<div id="overlay"></div>
+<div id="content">
+  <center>
+  <table>
+    <tbody><tr>
+      <td>
+        <img id="imgHr1" src="./images/2.png" class="digit">
+      </td>
+      <td>
+        <img id="imgHr2" src="./images/3.png" class="digit">
+      </td>
+      <td>
+        <img id="dotsHr" src="./images/dots-yellow.png" class="digit" style="visibility: hidden;">
+      </td>
+      <td>
+        <img id="imgMin1" src="./images/5.png" class="digit">
+      </td>
+      <td>
+        <img id="imgMin2" src="./images/6.png" class="digit">
+      </td>
+      <td>
+        <img id="dotsMin" src="./images/dots-yellow.png" class="digit" style="visibility: hidden;">
+      </td> 
+      <td>
+        <img id="imgSec1" src="./images/0.png" class="digit">
+      </td>
+      <td>
+        <img id="imgSec2" src="./images/6.png" class="digit">
+      </td>              
+    </tr>
+      </tbody></table></center>
+</div>
+      </div>
+<script src="./scripts/caketime.js"></script>
 
-    setInterval(function(){ 
-      var now = new Date();
-      var hours = now.getHours();
-      var minutes = now.getMinutes();
-      var seconds = now.getSeconds();
-      var hourdots = document.getElementById("dotsHr");
-      var minutedots = document.getElementById("dotsMin");
 
-      setImage("imgHr1", parseInt(hours / 10));
-      setImage("imgHr2", hours % 10);
-
-      setImage("imgMin1", parseInt(minutes / 10));
-      setImage("imgMin2", minutes % 10);
-
-      setImage("imgSec1", parseInt(seconds / 10));
-      setImage("imgSec2", seconds % 10);
-
-      setImage("dotsHr", (hours % 2)? "dots-yellow" : "dots-blue");
-      setImage("dotsMin", (hours % 2)? "dots-yellow" : "dots-blue");
-      
-
-      hourdots.style.visibility = (hourdots.style.visibility == "hidden")? "visible": "hidden";
-      minutedots.style.visibility = (minutedots.style.visibility == "hidden")? "visible": "hidden";
-
-    }, 500);
-  </script>
 </body>
 </html>
