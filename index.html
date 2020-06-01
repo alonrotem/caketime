@@ -2,85 +2,13 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
-  <link rel="manifest" href="./images/favicon/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/images/favicon/site.webmanifest">
   <meta property="og:image"  content="https://alonrotem.github.io/caketime/images/0.png" />
   <meta property="og:description" content="It's always a good time for a cake!" />
-  <style>
-    body {
-      background: url(./images/kisses.png)  no-repeat center center fixed;
-      -webkit-background-size: 100%;
-      -moz-background-size: 100%;
-      -o-background-size: 100%;
-      background-size: 100%;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-    }
-    .wrapper {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-
-  height: 178px;
-  width: 100%;
-}
-.digit
-{
-  width: 108px;
-}
-
-#overlay{
-  background-color: darkgreen;
-  width:100%;
-  height: 178px;
-  position: relative;
-  top: 0px;
-  padding-bottom: 30px;
-  opacity: 70%;
-}
-#content
-{
-  position: relative;
-  top: -208px;
-}
-
-.fade-in {
-animation: fadeIn ease 4s;
--webkit-animation: fadeIn ease 4s;
--moz-animation: fadeIn ease 4s;
--o-animation: fadeIn ease 4s;
--ms-animation: fadeIn ease 4s;
-}
-@keyframes fadeIn {
-0% {opacity:0;}
-100% {opacity:1;}
-}
-
-@-moz-keyframes fadeIn {
-0% {opacity:0;}
-100% {opacity:1;}
-}
-
-@-webkit-keyframes fadeIn {
-0% {opacity:0;}
-100% {opacity:1;}
-}
-
-@-o-keyframes fadeIn {
-0% {opacity:0;}
-100% {opacity:1;}
-}
-
-@-ms-keyframes fadeIn {
-0% {opacity:0;}
-100% {opacity:1;}
-}
-  </style>
+  <link rel="stylesheet" href="/styles/caketime.css">
   <title>Cake Time!</title>
 </head>
 <body>
@@ -91,35 +19,33 @@ animation: fadeIn ease 4s;
   <table>
     <tbody><tr>
       <td>
-        <img id="imgHr1" src="./images/2.png" class="digit fade-in">
+        <img id="imgHr1" src="/images/2.png" class="digit fade-in">
       </td>
       <td>
-        <img id="imgHr2" src="./images/3.png" class="digit fade-in">
+        <img id="imgHr2" src="/images/3.png" class="digit fade-in">
       </td>
       <td>
-        <img id="dotsHr" src="./images/dots-yellow.png" class="digit fade-in" style="visibility: hidden;">
+        <img id="dotsHr" src="/images/dots-yellow.png" class="digit fade-in" style="visibility: hidden;">
       </td>
       <td>
-        <img id="imgMin1" src="./images/5.png" class="digit fade-in">
+        <img id="imgMin1" src="/images/5.png" class="digit fade-in">
       </td>
       <td>
-        <img id="imgMin2" src="./images/6.png" class="digit fade-in">
+        <img id="imgMin2" src="/images/6.png" class="digit fade-in">
       </td>
       <td>
-        <img id="dotsMin" src="./images/dots-yellow.png" class="digit fade-in" style="visibility: hidden;">
+        <img id="dotsMin" src="/images/dots-yellow.png" class="digit fade-in" style="visibility: hidden;">
       </td> 
       <td>
-        <img id="imgSec1" src="./images/0.png" class="digit fade-in">
+        <img id="imgSec1" src="/images/0.png" class="digit fade-in">
       </td>
       <td>
-        <img id="imgSec2" src="./images/6.png" class="digit fade-in">
+        <img id="imgSec2" src="/images/6.png" class="digit fade-in">
       </td>              
     </tr>
       </tbody></table></center>
-</div>
       </div>
-<script src="./scripts/caketime.js"></script>
-
-
+  </div>
+  <script src="/scripts/caketime.js"></script>
 </body>
 </html>
